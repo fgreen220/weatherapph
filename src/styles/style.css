@@ -1,0 +1,223 @@
+#noScrollDiv::-webkit-scrollbar {
+  display:none;
+}
+
+#noScrollDiv {
+  -ms-overflow-style: none;
+  scrollbar-width:none;
+}
+
+#tooltip {
+  color:red;
+}
+
+.clear-day{
+  background-image: url('../assets/clear-day.gif');
+  background-size: 100% 100%;
+}
+.clear-night{
+  background-image: url('../assets/clear-night.gif');
+  background-size: 100% 100%;
+}
+
+.rain{
+  background-image: url('../assets/rain.gif');
+  background-size: 100% 100%;
+}
+
+.snow{
+  background-image: url('../assets/snow.gif');
+  background-size: 100% 100%;
+}
+
+.sleet{
+  background-image: url('../assets/snow.gif');
+  background-size: 100% 100%;
+}
+.wind{
+  background-image: url('../assets/wind.gif');
+  background-size: 100% 100%;
+}
+.fog{
+  background-image: url('../assets/fog.gif');
+  background-size: 100% 100%;
+}
+.cloudy{
+  background-image: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ), url('../assets/cloudy.gif');
+  background-size: 100% 100%;
+}
+.partly-cloudy-day{
+  background-image: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ), url('../assets/cloudy.gif');
+  background-size: 100% 100%;
+  z-index:6;
+}
+
+.partly-cloudy-night{
+  background-image: url('../assets/cloudy-night.gif');
+  background-size: 100% 100%;
+}
+.hail {
+  background-image: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ), url('../assets/hail.gif');
+  background-size: 100% 100%;
+}
+.tornado {
+  background-image: url('../assets/tornado.gif');
+  background-size: 100% 100%;
+}
+.thunderstorm {
+  background-image: url('../assets/thunderstorm.gif');
+  background-size: 100% 100%;
+}
+.clear-day1{
+  background-image: url('../assets/clear-day1.gif');
+  background-size: 100% 100%;
+}
+.clear-night1{
+  background-image: url('../assets/clear-night1.gif');
+  background-size: 100% 100%;
+}
+.rain1{
+  background-image: url('../assets/rain1.gif');
+  background-size: 100% 100%;
+}
+
+.snow1{
+  background-image: url('../assets/snow1.gif');
+  background-size: 100% 100%;
+}
+
+.sleet1{
+  background-image: url('../assets/snow1.gif');
+  background-size: 100% 100%;
+}
+.wind1{
+  background-image: url('../assets/wind1.gif');
+  background-size: 100% 100%;
+}
+.fog1{
+  background-image: url('../assets/fog1.gif');
+  background-size: 100% 100%;
+}
+.cloudy1{
+  background-image: url('../assets/cloudy1.gif');
+  background-size: 100% 100%;
+}
+.partly-cloudy-day1{
+  background-image: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ), url('../assets/cloudy1.gif');
+  background-size: 100% 100%;
+  z-index:6;
+}
+
+.partly-cloudy-night1{
+  background-image: url('../assets/cloudy-night1.gif');
+  background-size: 100% 100%;
+}
+.hail1{
+  background-image: 
+  linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2)
+  ), url('../assets/hail1.gif');
+  background-size: 100% 100%;
+}
+.tornado1{
+  background-image: url('../assets/tornado1.gif');
+  background-size: 100% 100%;
+}
+.thunderstorm1{
+  background-image: url('../assets/thunderstorm1.gif');
+  background-size: 100% 100%;
+}
+
+p {
+  color:white;
+  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+  font-weight:900;
+}
+
+p.MuiFormHelperText-root {
+  text-shadow:none;
+}
+
+.clear-day{
+  background-image: url('../assets/clear-day.gif')
+}
+
+#guest-user-button:hover {
+  color:white;
+}
+
+#cityInputDrawer .MuiDrawer-paperAnchorBottom {
+  height:97vh;
+}
+
+#city-input-form .MuiTextField-root .MuiInputBase-root input{
+  padding:5px 0;
+}
+
+#city-input-form .MuiTextField-root .MuiInput-underline:before {
+  border-bottom-width:0px;
+}
+
+#city-input-form .MuiTextField-root .MuiInput-underline:after {
+  border-bottom-width:0px;
+}
+
+#city-input-form .MuiTextField-root {
+  background-color:lightgray;
+  border-radius:6px;
+}
+
+#signinPage {
+  height:100vh;
+}
+
+#signupPage {
+  height:100vh;
+}
+
+#darksky-link {
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+
+
+
+
+
+
+
+
+/* .clear-night{}
+.rain{}
+.snow{}
+.sleet{}
+.wind{}
+.fog{}
+.cloudy{}
+.partly-cloudy-day {}
+.partly-cloudy-night{}
+.hail{}
+.thunderstorm{}
+.tornado{} */
+
+
+
+
