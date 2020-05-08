@@ -2,14 +2,20 @@ const { Pool } = require('pg')
 const { config } = require('./config');
 const bcrypt = require('bcrypt')
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL
+  // user: 'euxghtxqpsxdlg',
+  // host: 'ec2-52-87-135-240.compute-1.amazonaws.com',
+  // database: 'dclhrr8rmhd8v4',
+  // port: 5432,
+  // password: 'e438ef711916fdf7eccd86260853f8b8ec7a64f5ed09d4bb1b2504cdc572a8ae',
+  ssl: true,
+  connectionString: process.env.DATABASE_URL,
 })
 
 const getUsers = (request, response) => {
   const { username, password, authorizedrequest } = request.headers;
   // console.log(username, password)
   if(authorizedrequest === 'true') {
-    pool.query('SELECT username FROM users ORDER BY id ASC', (error, results) => {
+    pool.query('SELECT username FROM weatherapp ORDER BY id ASC', (error, results) => {
       if (error) {
         throw error;
       }
@@ -17,14 +23,14 @@ const getUsers = (request, response) => {
     })
   }
   if (!username && !password && !authorizedrequest) {
-    pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {
+    pool.query('SELECT * FROM weatherapp ORDER BY id ASC', (error, results) => {
       if (error) {
         throw error;
       }
       response.status(200).json(results.rows)
     })
   } else if (username && password) {
-      pool.query('SELECT * FROM users WHERE username = $1', [username], (error, results) => {
+      pool.query('SELECT * FROM weatherapp WHERE username = $1', [username], (error, results) => {
         if (error) {
           throw error
         }
@@ -49,7 +55,7 @@ const getUsers = (request, response) => {
 const createUser = (request, response) => {
   const { username, password, state } = request.body
   bcrypt.hash(password, 12, function(err, hash) {
-    pool.query(`INSERT INTO users (username, password, state) VALUES ($1, $2, $3) RETURNING id`, [username, hash, state], (error, results) => {
+    pool.query(`INSERT INTO weatherapp (username, password, state) VALUES ($1, $2, $3) RETURNING id`, [username, hash, state], (error, results) => {
       if (error) {
         throw error
       }
@@ -64,7 +70,7 @@ const updateUser = (request, response) => {
   // username = $1, password = $2, cities = $3, 
   // username, password, cities, 
   pool.query(
-    'UPDATE users SET state = $1 WHERE id = $2',
+    'UPDATE weatherapp SET state = $1 WHERE id = $2',
     [state, id],
     (error, results) => {
       if (error) {
