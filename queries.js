@@ -2,11 +2,8 @@ const { Pool } = require('pg')
 const { config } = require('./config');
 const bcrypt = require('bcrypt')
 const pool = new Pool({
-  user: 'me',
-  host: 'localhost',
-  database: 'weatherapp',
-  port: 5432,
-  password: config.dbPass
+  connectionString: process.env.DATABASE_URL,
+  ssl: true
 })
 
 const getUsers = (request, response) => {
